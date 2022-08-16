@@ -1,25 +1,81 @@
 # You can find information on how to convert numbers to a different base here:
-# https://www.tutorialspoint.com/computer_logical_organization/number_system_conversion.htm
+# https://www.tutorialspoint.com/computer_logical_organization/number_system_conversion.html
 
 # You can find information on how to convert numbers to roman numerals here:
 # https://www.romannumerals.org/converter
 
+def binarify(num):
 
-def binarify(num): 
-  """convert positive integer to base 2"""
-  if num<=0: return '0'
-  digits = []
-  return ''.join(digits)
+    if num<=0:
+
+        return '0'
+
+    digits = []
+
+    # return ''.join(digits)
+
+    while num > 0:
+
+        divider = str(num/2).split('.')
+
+        num = int(divider[0])
+
+        if int(divider[1]) >= 1:
+
+            digit = 1
+
+        else:
+
+            digit = 0
+
+        digits.append(digit)
+
+    digits = [str(x) for x in digits]
+
+    return ''.join(digits[::-1])
+
+  
+  
 
 def int_to_base(num, base):
-  """convert positive integer to a string in any base"""
-  if num<=0:  return '0' 
-  digits = []
-  return ''.join(digits)
+
+    if num<=0:
+
+        return '0'
+
+    digits = []
+
+    # return ''.join(digits)
+
+    while num > 0:
+
+        divider = str(num/base).split('.')
+
+        num = int(divider[0])
+
+        if int(divider[1]) >= base:
+
+            digit = 1
+
+        if int(divider[1]) == 0:
+          
+            digit = 0
+        
+        else:
+
+            digit = base
+
+        digits.append(digit)
+
+    digits = [str(x) for x in digits]
+
+    return ''.join(digits[::-1])
+
 
 def base_to_int(string, base):
   """take a string-formatted number and its base and return the base-10 integer"""
   if string=="0" or base <= 0 : return 0 
+  
   result = 0 
   return result 
 

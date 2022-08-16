@@ -168,7 +168,7 @@ duke_loc
 # Find WUSTL
 washu = gmaps.geocode('1 Brookings Dr, St. Louis, MO 63130')
 washu_loc = washu[0]['geometry']['location']
-washu_loc
+type(washu_loc)
 
 # Find the distance (in km) between Duke and WUSTL
 distance = gmaps.distance_matrix(duke_loc, washu_loc)

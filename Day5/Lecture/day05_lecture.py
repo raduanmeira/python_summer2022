@@ -180,7 +180,7 @@ keyword = re.compile(r"America[a-z]*")
 
 
 # search file for keyword in line by line version
-for i, line in enumerate(text):
+for i, line in enumerate(obama):
     if keyword.search(line):
         print(i)
         print(line)

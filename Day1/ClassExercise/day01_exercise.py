@@ -5,12 +5,29 @@
 # Write a for loop, while loop, or function (or all three!) to create a
 # list of the first 10 numbers of the fibonacci sequence
 
+count = 0
+x = 1
+y = 1
 
+while (count < 11):
+  count = count +1
+  if (count < 3):
+    print(x)
+  else: 
+    x = x + y
+    y = x - y
+    print(x)
+  
 
 """return true if there is no e in 'word', else false"""
 def has_no_e(word):
-
-
+  length = len(word)
+  for i in range(0, length):
+    if word[i] == "e":
+      print(False)
+    
+word = "five"
+has_no_e("five")
 """return true if there is e in 'word', else false"""
 def has_e(word):
 

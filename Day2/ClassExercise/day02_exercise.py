@@ -5,13 +5,16 @@ class Senator():
     self.name = name
     self.bills_voted_on = [] ## list of Bill objects
 
-  def __str__(self): # Print method  
+  def __str__(self):
+    print(name) # Print method  
 
-  def vote(self, bill, choice):
+'''def vote(self, bill, choice):
+    self.bill = bill
+    choice = choice
     #update the bill object--add the senator's name to the the list of yes/no/abstain
     #update the senator object--add this bill to the bills this senator has voted on
     #print an informative message announcing the vote 
-
+'''
 class Bill():
   def __init__(self, title):
     self.title = title
