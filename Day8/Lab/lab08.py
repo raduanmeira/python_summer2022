@@ -4,8 +4,11 @@
 ## Helpful link:
 ## https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/the-euclidean-algorithm
 def gcd(x, y):
-
-
+  if x or y == 1:
+    return divider
+  else:
+    
+      
 ## Problem 2
 ## Write a function using recursion that returns prime numbers less than 121
 ## remember, primes are not the product of 
