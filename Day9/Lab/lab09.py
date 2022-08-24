@@ -40,17 +40,34 @@ print(sum([len(ring[node]) for node in ring.keys()])/2)
 ## TODO: create a square graph with 9 nodes using the makeLink function (from above)
 ## Example: https://www.mathworks.com/matlabcentral/answers/213955-how-to-determine-the-neighbours-of-each-node-in-a-square-graph
 
+square = {}
+n = 9
+for i in range(n):
+  if (i+1)%3 !=0:
+    square = makeLink(square, i+1, i+2)
+  if (i+1)%3 ==0:
+    square = makeLink(square, i+1, i)  
+  if i < 6:
+    square = makeLink(square, i+1, i+4)
+  
+print(square)  
+
+
 ## TODO: define a function countEdges
 
 # You may want to use the module math
 import math 
+n = 9
 
+def countEdges(tree):
+  counter = 0
+  for node in tree.keys():
+    if len(tree[node]) == 2:
+      counter += 1
+      
+  return counter
 
-
-
-
-
-
+countEdges(square)
 
 
 ##  Social Network
